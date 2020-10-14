@@ -70,6 +70,11 @@
                                     </form>
                                 </div>
                             </li>
+                            <li class="nav-item">
+                                <a href="/purchase" class="nav-link">
+　　                                カート
+　                              </a>
+                            </li>
                         @endguest
                     </ul>
                 </div>

@@ -51,7 +51,7 @@ class LessonsController extends Controller
      */
     public function show(Lesson $lesson)
     {
-        //
+        return view('lessons.show', ['lesson' => $lesson]);
     }
 
     /**

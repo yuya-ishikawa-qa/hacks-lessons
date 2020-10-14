@@ -5,9 +5,13 @@
           @foreach ($lessons as $lesson)
             <div class="col-md-4 mb-2">
                <div class="card">
-                 <div class="card-header">{{ $lesson->name }}</div>
-                 <div class="card-body">{{ $lesson->amount }}円</div>
-             </div>
+				　　<div class="card-header">
+				　　　　<a href="/lesson/{{ $lesson->id }}">{{ $lesson->name }}</a>
+				　　</div>
+				　　<div class="card-body">
+				　　　　{{ $lesson->amount }}円
+				　　</div>
+				</div>
         　　</div>
 　　　　　　@endforeach
 　　　　</div>

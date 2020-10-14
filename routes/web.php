@@ -11,11 +11,15 @@
 |
 */
 
-Route::get('/', 'LessonsController@index');;
+Route::get('/', 'lessonscontroller@index');;
 
 Auth::routes();
 
 
-Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('/', 'lessonscontroller@index')->name('home');
 Route::get('/lesson/{lesson}', 'LessonsController@show');
+
+Route::post('/purchase', 'CartController@store');
+Route::get('/purchase' , 'CartController@index');
+Route::put('/purchase/{cartlesson}','CartController@update')->name('update');
+Route::delete('/purchase/{cartlesson}','CartController@destroy')->name('delete');

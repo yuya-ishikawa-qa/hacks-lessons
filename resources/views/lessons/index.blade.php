@@ -12,7 +12,21 @@
 				　　　　{{ $lesson->amount }}円
 				　　</div>
 				</div>
+				@auth
+				<form method = "POST" action="purchase" class ="form-inline m-1">
+			　　　　{{ csrf_field() }} 
+				　　<select name="quantity" class="form-control col-md-2 mr-1">
+				　　　<option selected>1</option>
+				　　　<option>2</option>
+				　　　<option>3</option>
+				　　　<option>4</option>
+				　　　<option>5</option>
+				　　</select>
+				　　<input type="hidden" name="lesson_id" value="{{ $lesson -> id }}">                                　　　　<button type="submit" class="btn btn-primary" col-md-6>カートに入れる</button>
+				</form>
+				@endauth
         　　</div>
+			
 　　　　　　@endforeach
 　　　　</div>
 		<div class="row justify-content-center"> 

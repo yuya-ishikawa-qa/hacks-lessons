@@ -23,3 +23,6 @@ Route::post('/purchase', 'CartController@store');
 Route::get('/purchase' , 'CartController@index');
 Route::put('/purchase/{cartlesson}','CartController@update')->name('update');
 Route::delete('/purchase/{cartlesson}','CartController@destroy')->name('delete');
+
+Route::get('/purchase/buy', 'BuyController@index');
+Route::post('/purchase/buy', 'BuyController@store');
